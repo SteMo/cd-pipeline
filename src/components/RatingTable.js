@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './RatingTable.scss';
 import RatingRow from './RatingRow';
 import PropTypes from 'prop-types';
 

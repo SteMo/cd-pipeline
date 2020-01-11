@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './RatingRow.scss';
 
 function RatingRow(props) {
   return (
         <tr>
-          <td>{props.name}</td>
-          <td>{props.views}</td>
-          <td>{props.rating}</td>
+          <td className="rating-text">{props.name}</td>
+          <td className="rating-views">{props.views}</td>
+          <td className="rating-score">{props.rating}</td>
         </tr>
   );
 }
