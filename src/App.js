@@ -1,26 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import RatingRow from './components/RatingRow';
+import RatingTable from './components/RatingTable';
 
 function App() {
+
+  const listItems = stories.map((story) =>
+    <RatingRow key={story.name} name={story.name} views={story.views} rating={story.rating}></RatingRow>
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Top X Stories</h1>
+      <RatingTable storyList={stories} />
     </div>
   );
 }
+
+const stories = [
+  { name: "Dr. Sommer", views: 200, rating: 9 },
+  { name: "Chili-Tester", views: 150, rating: 8 }
+];
 
 export default App;
