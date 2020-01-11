@@ -1,14 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import RatingRow from './components/RatingRow';
 import RatingTable from './components/RatingTable';
 
 function App() {
-
-  const listItems = stories.map((story) =>
-    <RatingRow key={story.name} name={story.name} views={story.views} rating={story.rating}></RatingRow>
-  );
 
   return (
     <div className="App">
