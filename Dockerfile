@@ -10,7 +10,7 @@ WORKDIR /app
 # install and cache app dependencies
 COPY package.json /app/package.json
 #RUN yarn build
-RUN yarn react-scripts@3.0.1 -g --silent
+RUN yarn install react-scripts@3.3.0 -g
 
 # build app
 CMD ["yarn", "build"]
