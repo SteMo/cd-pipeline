@@ -20,4 +20,4 @@ RUN node -v
 RUN yarn
 
 # build app
-CMD ["yarn", "build"]
+# CMD ["yarn", "build"]
